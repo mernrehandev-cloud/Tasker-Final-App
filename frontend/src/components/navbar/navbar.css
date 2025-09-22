@@ -1,0 +1,139 @@
+.navbar-brand {
+    width: 170px;
+}
+
+nav {
+    box-shadow: 0px 0px 10px 1px grey;
+}
+
+.navbar-toggler:focus {
+    box-shadow: var(--bs-box-shadow) !important
+}
+
+.nav-link:focus,
+.nav-link.active {
+    color: white !important;
+    background-color: rgb(0, 124, 195) !important;
+}
+
+.settingicon:hover {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.custom-divider {
+    border: 1px solid #007cc3;
+    border-radius: 50px;
+}
+
+.btn.show,
+.btn:focus,
+.btn {
+    border: none;
+}
+
+.dropdown-menu {
+    padding: 0px 0px;
+    --bs-dropdown-min-width: fit-content;
+    /* background-color: rgb(255, 255, 255, 0.5); */
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: #007cc3;
+}
+
+.firstitem {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.seconditem {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.dropdown-menu[data-bs-popper] {
+    left: -45px;
+    position: absolute;
+}
+
+@media (max-width: 768px) {
+    .navbar-account {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .navbar-nav {
+        margin-bottom: 10px;
+        font-size: 12px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .nav-link:last-child {
+        grid-column: span 2;
+    }
+
+    .dropdown-menu[data-bs-popper] {
+        background-color: white;
+        font-size: 15px;
+        left: 0;
+    }
+
+    .navbar-brand {
+        width: 100px;
+    }
+
+    .navbar-toggler {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar-main {
+        margin-bottom: 10px;
+        font-size: 14px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-columns: 1fr 1fr 1fr; */
+    }
+
+    .navbar-account {
+        font-size: 14px;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-columns: 1fr 1fr 1fr; */
+    }
+
+    .navbar-main> :nth-child(4),
+    .navbar-main> :nth-child(5) {
+        grid-column: span 1;
+        justify-self: center;
+        /* display: inline-block; */
+    }
+
+    .dropdown-menu[data-bs-popper] {
+        background-color: white;
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .navbar-main {
+        margin-top: 12px;
+    }
+}

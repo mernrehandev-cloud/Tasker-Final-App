@@ -1,0 +1,98 @@
+.text-work {
+    color: purple;
+}
+
+.tasks:hover {
+    box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.15) !important;
+}
+
+.icon-card1,
+.icon-card3 {
+    color: #007cc3;
+    font-size: 25px;
+}
+
+.text-custom {
+    color: #007cc3 !important;
+}
+
+.descmain {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 500;
+}
+
+.icon-card2 {
+    color: red;
+    font-size: 25px;
+}
+
+.icon-card1:hover,
+.icon-card2:hover,
+.icon-card3:hover {
+    cursor: pointer;
+}
+
+.border-warning {
+    border-left: 3px solid orange;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.border-success {
+    border-left: 3px solid green;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.border-work {
+    border-left: 3px solid purple;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.date-time,
+.detail-card {
+    font-weight: 500;
+}
+
+.desc {
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .card-title {
+        text-align: center;
+        font-size: 15px !important;
+    }
+
+    .date-time {
+        text-align: center;
+        font-size: 11px !important;
+    }
+
+    .desc {
+        font-size: 13px !important;
+        /* text-align: center; */
+    }
+
+    .descmain {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .other-details {
+        font-size: 11px !important;
+        text-align: center;
+    }
+
+    .text-custom svg {
+        font-size: 16px !important;
+    }
+
+    .icon-card1>button,
+    .icon-card2>button,
+    .icon-card3 {
+        font-size: 16px !important;
+    }
+}

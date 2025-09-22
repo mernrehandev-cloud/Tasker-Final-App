@@ -1,0 +1,19 @@
+.main-text,
+.total-main {
+    color: #007cc3;
+    font-weight: 700;
+}
+
+.total-text {
+    font-weight: 500;
+}
+
+
+@media (max-width: 768px) {
+
+    .main-text,
+    .total-main,
+    .total-text {
+        font-size: 15px !important;
+    }
+}

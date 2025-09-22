@@ -1,0 +1,30 @@
+.modal-del,
+.modal-del2 {
+    border-bottom: none !important;
+    border-top: none !important;
+}
+
+.modal-del-main .modal-dialog .modal-content {
+    width: 600px;
+}
+
+.modal-del-main .modal-dialog,
+.modal-lo-main .modal-dialog {
+    /* left: 1%; */
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-del button:hover {
+    background-color: lightgray;
+}
+
+@media (max-width:768px) {
+    .modal-del-main .modal-dialog .modal-content {
+        width: 100% !important;
+    }
+
+    .modal-del2 button {
+        font-size: small !important;
+    }
+}

@@ -1,0 +1,15 @@
+Country
+Advertisement Type
+Advertisement Status
+Role
+Advertisement Category
+Advertisement Images
+
+
+Provinces: Country
+City: Province
+City Area: City
+User: Role
+Advertisement Subcategory: Category
+
+Advertisement: City Area, Advertisement Status, Advertisement Types, User, Subcategory, Images.

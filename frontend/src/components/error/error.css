@@ -1,0 +1,9 @@
+@media (max-width: 768px) {
+    .alert-heading {
+        font-size: medium;
+    }
+
+    .btn{
+        font-size: 11px;
+    }
+}

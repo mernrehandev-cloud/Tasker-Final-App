@@ -1,0 +1,202 @@
+.bg-company {
+    background-color: #007cc3;
+    border: 1px solid #007cc3;
+}
+
+.modalbtn {
+    background-color: #007cc3 !important;
+    border: #007cc3 !important;
+    padding-block: 10px !important;
+    height: fit-content;
+}
+
+.modalbtn:hover {
+    background-color: black;
+    border: black;
+    color: white;
+}
+
+.modalbtn2 {
+    background-color: #007cc3 !important;
+    border: #007cc3 !important;
+}
+
+.modalbtn2:hover {
+    background-color: #157347 !important;
+    border: black;
+    color: white;
+}
+
+.btn-custom:focus {
+    background-color: red;
+}
+
+.btn-modal,
+.btn-modal:hover,
+.btn-modal:focus,
+.modalbtn2:hover {
+    color: #007cc3;
+    font-weight: 700;
+}
+
+.card-add {
+    border: 0px transparent !important;
+    border-radius: 7.5px;
+    width: 650px;
+}
+
+.modal-header-add,
+.modal-header-edit {
+    border: 1px #007cc3 solid !important;
+    border-top-left-radius: 6.15px !important;
+    border-top-right-radius: 6.15px !important;
+}
+
+.border-custom,
+.border-custom:focus {
+    border: transparent;
+    box-shadow: inset 1px 2px 5px 2px rgba(0, 0, 0, 0.15) !important;
+}
+
+.border-custom:hover {
+    border: 2px solid rgba(0, 124, 195, 0.584);
+}
+
+.progress {
+    height: 30px !important;
+    color: white;
+}
+
+.progress-bar {
+    background-color: transparent !important;
+}
+
+.progress.empty {
+    background-color: red;
+}
+
+.progress.empty::after {
+    content: "0 %";
+    margin-inline: auto;
+    margin-block: auto;
+    /* background-color: green; */
+}
+
+.form-range.empty::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    background-image: url('/images/status/empty.svg');
+}
+
+.progress.prog {
+    background-color: orange;
+}
+
+.form-range.prog::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    background-image: url('/images/status/prog.svg');
+}
+
+.progress.done {
+    background-color: #007cc3;
+}
+
+.form-range.done::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    background-image: url('/images/status/done.svg');
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: lightgray;
+    height: 10px;
+    /* Color of the track */
+}
+
+.modal {
+    --bs-modal-margin: 10px !important;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: 1px solid lightgray;
+    box-shadow: 0px 1px 1px 2px rgba(0, 0, 0, 0.25)
+}
+
+.progressmain {
+
+    padding: 0.7rem .75rem;
+    border-radius: 0.375rem;
+    border: 1px solid #dee2e6;
+    box-shadow: inset 1px 2px 5px 2px rgba(0, 0, 0, 0.15) !important;
+}
+
+.progressmain:hover {
+    border: 2px solid rgba(0, 124, 195, 0.584);
+}
+
+textarea {
+    height: 150px !important;
+}
+
+@media (max-width: 768px) {
+    .modalbtn {
+        font-size: 15px;
+    }
+
+    .card-add {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .taskmodal {
+        transform: none !important;
+    }
+
+    .border-custom[type="date"],
+    .border-custom[type="time"] {
+        /* height: 10px !important; */
+        padding-top: 20px !important;
+        padding-bottom: 0px !important;
+    }
+
+    .form-floating>.form-control,
+    .form-floating>.form-control-plaintext,
+    .form-floating>.form-select {
+        font-size: 14px;
+    }
+
+    .modalbtn2 *,
+    .btn-modal * {
+        font-size: 14px;
+    }
+
+    .modal-header {
+        padding-block: 10px !important;
+    }
+
+    .form-floating>.form-control textarea {
+        height: 120px !important;
+    }
+
+    .plaintext{
+        font-size: 13px !important;
+    }
+
+    .mainheader{
+        font-size: larger !important;
+    }
+
+    .modal-del{
+        font-size: ;
+    }
+}

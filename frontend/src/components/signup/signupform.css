@@ -1,0 +1,54 @@
+.form-check-input,
+.form-check-input:focus {
+    border: transparent;
+    box-shadow: inset 1px 2px 5px 2px rgba(0, 0, 0, 0.15) !important;
+}
+
+.form-check-input:hover {
+    border: 1px solid rgb(0, 128, 0, 0.584);
+}
+
+.form-check-input:checked {
+    background-color: green;
+    border: 1px solid green;
+}
+
+.form-floating>.form-control[type="file"]:not(:placeholder-shown),
+.form-floating>.form-control[type="date"]:not(:placeholder-shown) {
+    padding-top: 30px;
+    height: max-content;
+}
+
+.form-floating>.form-control[type="file"]::file-selector-button {
+    background-color: #007cc3 !important;
+    border: none;
+    color: white;
+}
+
+.imagelabel {
+    display: none;
+}
+
+.signup-card {
+    width: 650px;
+}
+
+@media (max-width: 768px) {
+    .signup-card {
+        width: 100%;
+    }
+
+    .modalsignup {
+        transform: none !important;
+        padding-left: 0px !important;
+    }
+
+    .form-control {
+        min-height: 55px !important;
+        height: 55px !important;
+    }
+
+    .contactinput {
+        margin-bottom: 1rem;
+    }
+}
