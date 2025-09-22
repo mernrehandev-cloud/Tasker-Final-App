@@ -33,7 +33,7 @@ function ProfileIcon({ userid }) {
 
   return (
     <>
-      {userid ? (
+      {userid.Image !== "" ? (
         <img className="user-img" src={`/images/${userid.Image}`} alt="user" />
       ) : (
         <div className="user-img">
