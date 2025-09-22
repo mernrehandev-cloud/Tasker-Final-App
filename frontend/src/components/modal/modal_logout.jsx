@@ -4,7 +4,7 @@ import "./modal-del.css";
 import { useDispatch } from "react-redux";
 import { addlogin } from "../../reduxslices/loginslice";
 
-const Modal_logout = ({ show, onClose, onLogout, user }) => {
+const Modal_logout = ({ show, onClose }) => {
   const logindispatch = useDispatch();
 
   async function agreelogout() {

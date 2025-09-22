@@ -31,11 +31,11 @@ function Navcomp({
   FetchCategory,
   category,
   BEurl,
-  FetchUser,
+  // FetchUser,
 }) {
   useEffect(() => {
     FetchTasks();
-    FetchUser();
+    // FetchUser();
     // console.log(users);
   }, []);
 
@@ -56,22 +56,23 @@ function Navcomp({
     }
   }
 
-  const [userdata, setuserdata] = useState({});
+  const [userdata, setuserdata] = useState(false);
 
   async function FetchUser() {
     try {
-      const res = await fetch(`${BEurl}/users/${userid}`);
-      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+      console.log(userid);
+      // const res = await fetch(`${BEurl}/users/${userid}`);
+      // if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
 
-      const data = await res.json();
-      setuserdata(data);
+      // const data = await res.json();
+      // setuserdata(data);
     } catch (error) {
       console.log("Error fetching data:");
     }
   }
 
   useEffect(() => {
-    FetchUser();
+    // FetchUser();
   }, []);
 
   return (
@@ -135,7 +136,7 @@ function Navcomp({
                       className=""
                       id="dropdown-basic"
                     >
-                      <ProfileIcon />
+                      <ProfileIcon userid={userid} />
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu className="text-center">
@@ -144,7 +145,7 @@ function Navcomp({
                         to="/profile"
                         className="my-auto firstitem border-bottom"
                       >
-                        {userdata && userdata.Name ? userdata.Name : ""}
+                        {userid && userid.Name ? userid.Name : ""}
                       </Dropdown.Item>
                       <Dropdown.Item
                         onClick={logouthandle}
@@ -185,7 +186,7 @@ function Navcomp({
         show={statusl.show}
         onClose={() => setstatusl(false)}
         // onLogout={onLogout}
-        user={user1}
+        // user={user1}
       />
     </>
   );

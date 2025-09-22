@@ -57,6 +57,7 @@ export default function LoginForm({ BEurl, FetchTasks }) {
       if (res.ok) {
         const data = await res.json();
         // setfound(data);
+        console.log("backend data", data);
 
         settoast({
           show: true,
@@ -65,7 +66,7 @@ export default function LoginForm({ BEurl, FetchTasks }) {
           bg: "success",
           status: "circle-check",
         });
-        logindispatch(addlogin({ token: data.token, user_id: data.user._id }));
+        logindispatch(addlogin({ token: data.token, user_id: data.user }));
 
         setTimeout(() => {
           handleClose();

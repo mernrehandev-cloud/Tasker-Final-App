@@ -15,7 +15,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { jwtDecode } from "jwt-decode";
 import { removelogin } from "./reduxslices/loginslice";
 import { settitle } from "./reduxslices/titleslice";
-import { Helmet } from "react-helmet";
 
 function App() {
   const [tasks, setTasks] = useState([]);

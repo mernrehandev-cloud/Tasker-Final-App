@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 import ToastAlert from "../toastalert/toast";
 import { useSelector } from "react-redux";
 
-export default function ProfileData({ users, FetchUser, BEurl }) {
+export default function ProfileData({ FetchUser, BEurl }) {
   const [errors, setErrors] = useState({});
   //   const [user, setuser] = useState({});
   const [form, setForm] = useState({
@@ -39,31 +39,9 @@ export default function ProfileData({ users, FetchUser, BEurl }) {
 
   const [userdata, setuserdata] = useState({});
 
-  async function FetchUser() {
-    try {
-      const res = await fetch(`${BEurl}/users/${userid}`, {
-        headers: {
-          "X-Auth-Token": token,
-        },
-      });
-      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
-
-      const data = await res.json();
-      setuserdata(data);
-    } catch (error) {
-      console.log("Error fetching data:", error.message);
-    }
-  }
-
-  useEffect(() => {
-    if (userid && token) {
-      FetchUser();
-    }
-  }, [userid, token]);
-
   async function UpdateUser() {
     try {
-      const res = await fetch(`${BEurl}/users/${userdata._id}`, {
+      const res = await fetch(`${BEurl}/users/${userid._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -77,7 +55,7 @@ export default function ProfileData({ users, FetchUser, BEurl }) {
         settoast({
           show: true,
           header_toast: `Update Success`,
-          text: `Data of User ${userdata.Name} Successfully Updated۔`,
+          text: `Data of User ${userid.Name} Successfully Updated۔`,
           bg: "success",
           status: "circle-check",
         });
@@ -88,7 +66,7 @@ export default function ProfileData({ users, FetchUser, BEurl }) {
         settoast({
           show: true,
           header_toast: `Update Failed`,
-          text: `Data of User ${userdata.Name} Failed to Update`,
+          text: `Data of User ${userid.Name} Failed to Update`,
           bg: "danger",
           status: "circle-xmark",
         });
@@ -166,21 +144,21 @@ export default function ProfileData({ users, FetchUser, BEurl }) {
   }
 
   useEffect(() => {
-    if (userdata) {
+    if (userid) {
       setForm((prev) => ({
         ...prev,
-        Email: userdata.Email || "",
-        Name: userdata.Name || "",
-        BirthDate: userdata.BirthDate ? userdata.BirthDate.slice(0, 10) : "",
-        ContactNumber: userdata.ContactNumber || "",
+        Email: userid.Email || "",
+        Name: userid.Name || "",
+        BirthDate: userid.BirthDate ? userid.BirthDate.slice(0, 10) : "",
+        ContactNumber: userid.ContactNumber || "",
         // Image: user.Image || "",
-        SecurityAnswer: userdata.SecurityAnswer || "",
-        SecurityQuestion: userdata.SecurityQuestion || "",
+        SecurityAnswer: userid.SecurityAnswer || "",
+        SecurityQuestion: userid.SecurityQuestion || "",
       }));
 
       // console.log(form.ContactNumber);
     }
-  }, [userdata]);
+  }, [userid]);
 
   return (
     <Container fluid className="mt-4">
@@ -193,7 +171,7 @@ export default function ProfileData({ users, FetchUser, BEurl }) {
             >
               Welcome,{" "}
               <span className="shadow px-1 py-2 bg-success rounded fs-6 text-user">
-                {userdata ? userdata.Name : ""}
+                {userid ? userid.Name : ""}
               </span>{" "}
               to Tasker App
             </Card.Header>
