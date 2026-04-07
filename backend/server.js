@@ -6,7 +6,13 @@ const app = express();
 
 const cors = require("cors");
 
-app.use(cors());
+app.use(cors({
+  origin: process.env.Frontend_URL,
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  preflightContinue: false,
+  optionsSuccessStatus: 204,
+  credentials: true,
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
