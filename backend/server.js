@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const host = process.env.HOST;
-const port = process.env.PORT;
+const port = process.env.PORT || 10000;
 
 // app.use(express.static('public'));
 app.get("/", (req, res) => {
@@ -47,8 +47,8 @@ app.use((req, res, next) => {
 
 connectToDatabase()
   .then(() => {
-    app.listen(port, host, () => {
-      console.log(`Server is listening on http://${host}:${port}`);
+    app.listen(port, "0.0.0.0", () => {
+      console.log(`Server is listening on port: ${port}`);
     });
   })
   .catch((error) => {
